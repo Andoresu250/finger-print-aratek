@@ -1,0 +1,212 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="25dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="25dp" >
+
+            <ImageView
+                android:id="@+id/fingerIV"
+                android:layout_width="228dp"
+                android:layout_height="241dp"
+                android:layout_marginRight="50dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/nofinger" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Conductor"
+                        android:textColor="#FF000000"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/searchIBtn"
+                        android:layout_width="50dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_find"
+                        style="@style/PrimaryButton"
+                        />
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#FFDCDCDC" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:enabled="false"
+                        android:id="@+id/identificationET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Cedula"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:enabled="false"
+                        android:id="@+id/nameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:enabled="false"
+                        android:id="@+id/phoneET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Telefono"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:enabled="false"
+                        android:id="@+id/transportCompanyET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Empresa de transporte"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--&gt;-->
+
+                    <!--<EditText-->
+                        <!--android:enabled="false"-->
+                        <!--android:id="@+id/serialET"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:hint="ID Unico del dispositivo (IMEI)"-->
+                        <!--android:paddingTop="25dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--tools:text="" />-->
+
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#FFEEEEEE"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:paddingRight="10dp" >
+
+        <Button
+            android:id="@+id/enrollBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            style="@style/PrimaryButton"
+            android:enabled="false"
+            android:text="Tomar Huella" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            style="@style/PrimaryButton"
+            android:enabled="false"
+            android:text="Enviar" />
+
+        <!--<Button-->
+            <!--android:id="@+id/bt_enroll"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/enroll_fp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bt_verify"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/verify_fp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bt_identify"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/identify_fp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bt_clear"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/clear_fp_db" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bt_show"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/show_fp" />-->
+    </LinearLayout>
+
+</LinearLayout>
