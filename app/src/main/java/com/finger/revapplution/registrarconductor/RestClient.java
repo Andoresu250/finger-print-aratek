@@ -30,7 +30,7 @@ public class RestClient {
 
     private static final String format = "application/json";
 
-    private static final String BASE_URL = "https://muvit-api-revapp-andoresu250.c9users.io/api/v2/";
+    private static final String BASE_URL = "https://muvit-develop-free.herokuapp.com/api/v2/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -43,6 +43,7 @@ public class RestClient {
     }
 
     public static void post(Context context, String url, Object object, AsyncHttpResponseHandler responseHandler) throws UnsupportedEncodingException {
+        client.setTimeout(30);
         Gson gson = getGson();
         String jsonString = gson.toJson(object);
         StringEntity stringEntity = new StringEntity(jsonString);
@@ -71,6 +72,7 @@ public class RestClient {
 
 
     private static String getAbsoluteUrl(String relativeUrl) {
+        Log.i(TAG, "getAbsoluteUrl: " + BASE_URL + relativeUrl);
         return BASE_URL + relativeUrl;
     }
 
